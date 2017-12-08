@@ -1,10 +1,11 @@
 package com.drone
 
+import com.drone.Direcciones.Direccion
 import org.scalamock.scalatest.MockFactory
 import org.scalatest.{Matchers, WordSpec}
 
 import scala.collection.mutable.ListBuffer
-
+import Direcciones._
 class TestDrone extends WordSpec with Matchers with MockFactory {
 
   private def getId(i: Int) = {
