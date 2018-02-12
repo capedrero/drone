@@ -8,7 +8,7 @@ scalaVersion := "2.12.4"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % Test
 libraryDependencies += "org.scalamock" %% "scalamock" % "4.0.0" % Test
 
-coverageMinimum := 99
+coverageMinimum := 70
 
 coverageFailOnMinimum := false
 
