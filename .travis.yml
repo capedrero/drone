@@ -2,25 +2,8 @@ language: scala
 scala:
    - 2.12.4
 
-addons:
-  coverity_scan:
+script:
+  - sbt clean coverage test coverageReport
 
-    # GitHub project metadata
-    # ** specific to your project **
-    project:
-      name: capedrero/drone
-      version: 1.0
-      description: Drone
-
-    notification_email: git config user.email
-
-    build_command_prepend: ./configure
-
-    build_command: make
-
-    branch_pattern: coverity_scan
-
-notifications:
- email:
-   recipients:
-     - git config user.email
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
